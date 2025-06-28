@@ -42,13 +42,18 @@ initial begin
 		#40		d_in=32'h8888_0000;
 		#40		d_in=32'h9999_0000;
 		#40		d_in=32'haaaa_0000;
-
-	   #100     wr_en=1'b0; rd_en=1'b0;
-		#40 		rd_en=1'b1;
-		#40		rd_en=1'b0;
+		#40		d_in=32'hbbbb_0000;		
+//	   #40		d_in=32'hcccc_0000;
+//		#40		d_in=32'hdddd_0000;
+//		#40		d_in=32'heeee_0000;
+//		#40		d_in=32'hffff_0000;
+//		#40		d_in=32'hefef_efef;
+		#30     wr_en=1'b0; rd_en=1'b0;
 		#40		rd_en=1'b1;
+		#100	  wr_en=1'b1; rd_en=1'b0;
+		#40	  wr_en=1'b0; rd_en=1'b1;
 		#500
-	$finish;
+	$stop;
 	
 	end
 	
